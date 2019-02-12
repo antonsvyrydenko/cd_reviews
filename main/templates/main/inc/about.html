@@ -1,0 +1,8 @@
+{% extends "main/wrapper.html" %}
+{% block archive %}
+<h3>Latest addition</h3>
+<hr>
+	{% for val in values %}
+		<p>{{val}}</p>
+	{% endfor %}
+{% endblock %}

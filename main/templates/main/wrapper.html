@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+	<title>CD reviews</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+</head>
+<body>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>CD Reviews</h1>
+      {% block content %}
+      {% endblock %}
+      <p>
+        <a href="/" class="btn">Main</a>
+        <a href="/news" class="btn">Archive</a>
+        <a href="/about" class="btn">About</a>
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    {% block archive %}
+    {% endblock %}
+
+    <!-- latest post 
+
+    <h3>Latest addition</h3>
+
+    <img src="{% static 'main/img/1.png' %}" class="img-thumbnail">-->
+    {% include "main/inc/copyright.html" %}
+  </div>
+  <nav id="sidebar"></nav>
+
+</body>
+
+</html>
+
+

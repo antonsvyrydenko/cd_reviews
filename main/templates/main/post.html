@@ -1,0 +1,12 @@
+{% extends "main/wrapper.html" %}
+
+{% block archive %}
+	<h3>Latest addition</h3>
+	<hr>
+	{% for post in object_list %}
+		<a href="main/{{post.id}}"><h4>{{post.title}}</h4></a>
+		<img src="{{MEDIA_URL}}{{post.img.url}}" width="200" height="200">
+		<h4>{{post.date|date:"d-m-Y"}}</h4>
+		<hr>
+	{% endfor %}
+{% endblock %}

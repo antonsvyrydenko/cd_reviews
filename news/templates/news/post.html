@@ -1,0 +1,10 @@
+{% extends "main/wrapper.html" %}
+
+{% block archive %}
+<h3>{{article.title}}</h3>
+<hr>
+<img src="{{MEDIA_URL}}{{article.img.url}}" width="200" height="200">
+<p>{{article.text}}</p>
+<h4>{{article.date|date:"d-m-Y H:i:s"}}</h4>
+<hr>
+{% endblock %}
